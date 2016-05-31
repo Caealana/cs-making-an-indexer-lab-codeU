@@ -37,7 +37,11 @@ public class TermCounter {
 	 */
 	public int size() {
         // TODO: fill this in.
-		return -1;
+        int sum = 0;
+        for(int current : map.values()){
+        	sum += current;
+        }
+		return sum;
 	}
 
 	/**
@@ -130,6 +134,14 @@ public class TermCounter {
 			System.out.println(key + ", " + count);
 		}
 		System.out.println("Total of all counts = " + size());
+	}
+
+	/**
+	*
+	*Returns the terms stored in this keyset in a Set<String>
+	*/
+	public Set<String> getTerms(){
+		return map.keySet();
 	}
 
 	/**
